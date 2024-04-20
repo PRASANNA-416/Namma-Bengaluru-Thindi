@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "orders")
 public class Order {
 
     @Id
@@ -40,7 +41,6 @@ public class Order {
 
     private int totalPrice;
 
-    //private Payment payment;
 
 }
 
