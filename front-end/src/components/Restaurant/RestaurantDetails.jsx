@@ -2,6 +2,7 @@ import { Divider, FormControl, FormControlLabel, Grid, Radio, RadioGroup, Typogr
 import React, { useState } from 'react';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import MenuCard from './MenuCard';
 
 const categories = [
     "pizza",
@@ -29,6 +30,8 @@ const foodTypes =[
         label:"seasonal"
     },
 ]
+
+const menu = [1, 1, 1, 1, 1]
 const RestaurantDetails = () => {
 
     const [foodType, setFoodType] = useState("all"); // Correct variable name
@@ -130,7 +133,9 @@ const RestaurantDetails = () => {
             </div>
 
             <div className='space-y-5 lg:w-[80%] lg:pl-10'>
-                menu
+            {menu.map((item) => (
+                <MenuCard/>
+            ))}
             </div>
 
         </section>
